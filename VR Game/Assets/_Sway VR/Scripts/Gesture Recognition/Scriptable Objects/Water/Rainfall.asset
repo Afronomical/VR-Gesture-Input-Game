@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: Rainfall
+  m_EditorClassIdentifier: 
+  GestureName: 
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: -0.23402508, y: 0.13131331, z: 0.47481915}
+  lRotation: {x: -0.3745407, y: 0.10624035, z: 0.40251464, w: 0.8285013}
+  lPositionThreshold: 0.54
+  lRotationThreshold: 30
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 1
+  rPosition: {x: 0.30617845, y: 0.13938491, z: 0.43174157}
+  rRotation: {x: -0.44909307, y: 0.057661247, z: -0.32339072, w: 0.8309086}
+  rPositionThreshold: 0.54
+  rRotationThreshold: 30
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0

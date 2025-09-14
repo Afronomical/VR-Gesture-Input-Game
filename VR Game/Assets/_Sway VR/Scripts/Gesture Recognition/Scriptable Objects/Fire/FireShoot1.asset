@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: FireShoot1
+  m_EditorClassIdentifier: 
+  GestureName: 
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: -0.16506347, y: -0.032694805, z: 0.36934957}
+  lRotation: {x: -0.43872127, y: 0.38701907, z: 0.58393174, w: 0.5628176}
+  lPositionThreshold: 0.3
+  lRotationThreshold: 30
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 1
+  rPosition: {x: 0.19033511, y: -0.018836483, z: 0.32322845}
+  rRotation: {x: 0.5183747, y: 0.28756142, z: 0.5340158, w: -0.60284597}
+  rPositionThreshold: 0.3
+  rRotationThreshold: 30
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0

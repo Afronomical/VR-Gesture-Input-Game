@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: RockLaunch
+  m_EditorClassIdentifier: 
+  GestureName: 
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: -0.0849166, y: -0.022054058, z: 0.19986898}
+  lRotation: {x: -0.6959299, y: -0.060734745, z: 0.1051455, w: 0.70776933}
+  lPositionThreshold: 0.3
+  lRotationThreshold: 30
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 0
+  rPosition: {x: 0.11388979, y: -0.020088855, z: 0.6578314}
+  rRotation: {x: 0.15189691, y: -0.060960658, z: -0.022950249, w: -0.98624766}
+  rPositionThreshold: 0.3
+  rRotationThreshold: 30
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0

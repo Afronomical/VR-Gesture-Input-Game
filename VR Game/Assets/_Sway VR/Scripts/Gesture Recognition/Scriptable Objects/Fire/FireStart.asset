@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: FireStart
+  m_EditorClassIdentifier: 
+  GestureName: 
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: 0.11677176, y: -0.023742378, z: 0.2998022}
+  lRotation: {x: -0.14966194, y: 0.7285485, z: 0.3382003, w: 0.57657516}
+  lPositionThreshold: 0.3
+  lRotationThreshold: 30
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 1
+  rPosition: {x: -0.109356984, y: -0.017423974, z: 0.25846973}
+  rRotation: {x: 0.25169268, y: 0.5660142, z: 0.36750233, w: -0.69370085}
+  rPositionThreshold: 0.3
+  rRotationThreshold: 30
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0

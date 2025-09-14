@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  GestureName: TestGesture
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: -0.22948375, y: 0.032295503, z: 0.28441706}
+  lRotation: {x: -0.5472664, y: 0.27938104, z: 0.5354848, w: 0.57939786}
+  lPositionThreshold: 0.2
+  lRotationThreshold: 30.01
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 0
+  rPosition: {x: 0.20846258, y: -0.0001308769, z: 0.30124882}
+  rRotation: {x: -0.53188014, y: -0.24771269, z: -0.44196767, w: 0.67853266}
+  rPositionThreshold: 0.19
+  rRotationThreshold: 30.6
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8cf99c704e68146b10ab901c6993f0, type: 3}
+  m_Name: WaterSummon3
+  m_EditorClassIdentifier: 
+  GestureName: 
+  activeThisFrame: 0
+  activeLastFrame: 0
+  lPosition: {x: -0.0583857, y: -0.28752312, z: 0.45093563}
+  lRotation: {x: 0.08667451, y: -0.12342598, z: -0.60231, w: -0.78388536}
+  lPositionThreshold: 0.3
+  lRotationThreshold: 29.8
+  leftThumb: 0
+  leftIndex: 0
+  leftGrip: 0
+  rPosition: {x: 0.036760468, y: -0.21830742, z: 0.34871033}
+  rRotation: {x: 0.1609575, y: 0.10918246, z: 0.67302316, w: -0.71359074}
+  rPositionThreshold: 0.3
+  rRotationThreshold: 29.6
+  rightThumb: 0
+  rightIndex: 0
+  rightGrip: 0
