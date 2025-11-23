@@ -2560,10 +2560,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553407586}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3654,13 +3654,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba15fb843cd4174b90b436dd58000f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: Summon Rock
   activationTimer: 1
   cooldownTimer: 0.1
+  ongoingTimer: 1
+  gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: cc5279594ba9ed141af6aac56c65345d, type: 2}
   - {fileID: 11400000, guid: 3a12c7c3dc19427489f54f3c687f8042, type: 2}
   abilityManager: {fileID: 852772805}
+  viewRange: 5
+  tooCloseDistance: 2
+  maxFloorDistance: 2
+  rockSpawnLayers:
+    serializedVersion: 2
+    m_Bits: 0
   objectToSpawn: {fileID: 940441827170987538, guid: 505c8918b2ae9684da5cbf7f285d874a, type: 3}
   summonParticle: {fileID: 6584906457690957530, guid: cfc87d8a8f16b244286021caf4b24ee8, type: 3}
 --- !u!114 &852772805
@@ -3690,13 +3699,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a713aee0704c49aeb20c07856f36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: DefaultAbilityName
   activationTimer: 1
   cooldownTimer: 0.5
+  ongoingTimer: 1
+  gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: c1a114958ecc71147aa5c7dcf2af4080, type: 2}
   abilityManager: {fileID: 852772805}
   pushForce: 1000
+  rockSelectionRange: 1
   pushDirection: {fileID: 616128419}
   pushableObjects: []
 --- !u!1 &854812454

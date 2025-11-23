@@ -2873,6 +2873,8 @@ MonoBehaviour:
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
+  m_EnableGamepadInput: 1
+  m_EnableJoystickInput: 1
   m_PointAction: {fileID: 0}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
@@ -2882,8 +2884,6 @@ MonoBehaviour:
   m_SubmitAction: {fileID: 0}
   m_CancelAction: {fileID: 0}
   m_EnableBuiltinActionsAsFallback: 1
-  m_EnableGamepadInput: 1
-  m_EnableJoystickInput: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3085,14 +3085,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba15fb843cd4174b90b436dd58000f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: Summon Rock
   activationTimer: 1
   cooldownTimer: 0.1
+  ongoingTimer: 1
   gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: cc5279594ba9ed141af6aac56c65345d, type: 2}
   - {fileID: 11400000, guid: 3a12c7c3dc19427489f54f3c687f8042, type: 2}
   abilityManager: {fileID: 852772805}
+  viewRange: 5
+  tooCloseDistance: 2
+  maxFloorDistance: 2
+  rockSpawnLayers:
+    serializedVersion: 2
+    m_Bits: 0
   objectToSpawn: {fileID: 940441827170987538, guid: 505c8918b2ae9684da5cbf7f285d874a, type: 3}
   summonParticle: {fileID: 6584906457690957530, guid: cfc87d8a8f16b244286021caf4b24ee8, type: 3}
 --- !u!114 &852772805
@@ -3122,14 +3130,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537a713aee0704c49aeb20c07856f36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: DefaultAbilityName
   activationTimer: 1
   cooldownTimer: 0.5
+  ongoingTimer: 1
   gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: c1a114958ecc71147aa5c7dcf2af4080, type: 2}
   abilityManager: {fileID: 852772805}
   pushForce: 2000
+  rockSelectionRange: 1
   pushDirection: {fileID: 616128419}
   pushableObjects: []
 --- !u!114 &852772812
@@ -3144,9 +3155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63980f972e00124bab93f1f4258e160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: Flamethrower
   activationTimer: 1
   cooldownTimer: 4.22
+  ongoingTimer: 1
   gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: 4ce208734bef2ce4b806d3f09815be86, type: 2}
@@ -3154,6 +3167,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: adecea752e0c6b9428310bbc9de9b6d1, type: 2}
   abilityManager: {fileID: 852772805}
   flamethrowerGO: {fileID: 1627739489}
+  flamethrowerParticleSystem: {fileID: 0}
 --- !u!114 &852772818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,9 +3192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b13a76b29a6a9419001b60e6144e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHead: {fileID: 0}
   abilityName: DefaultAbilityName
   activationTimer: 1
   cooldownTimer: 10
+  ongoingTimer: 1
   gestureIndex: 0
   requiredGestures:
   - {fileID: 11400000, guid: 05e37558205b6a44aa2abdd26634f678, type: 2}
