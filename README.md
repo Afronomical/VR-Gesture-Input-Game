@@ -25,21 +25,21 @@ In order to make gestures more quickly, I have also created a gesture recorder w
 
 ![SwayVRRain-ezgif com-resize](https://github.com/user-attachments/assets/e450474f-dd92-4b2b-b3d8-832c82891798)
 
+
 </div>
 
 ## Installation
 
 ### Unity Project
-- Open Unity Hub
-- Ensure you have at least Unity ```6000.1.11f1```
 - Download the ```VR Game``` file
+- Open Unity Hub
 - Click the Add button and locate the file
 - Open the project
 
 
 ### Requirements
 - Unity Hub
-- Unity Version 6000.1.11f1
+- Unity Version ```6000.1.11f1```
 - Meta Quest 3 or 3s
 - 4GB of available space
   
