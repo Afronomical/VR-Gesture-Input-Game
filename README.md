@@ -18,28 +18,31 @@ that just takes the pose a person is making in VR and uses that to activate diff
 Using this system I've created gameplay akin to the Benders in the series "Avatar the Last Airbender", 
 where you use martial arts to throw rocks, spew fire and control bodies of water.
 
-
-
-
   
 ![unnamed](https://github.com/user-attachments/assets/597d627a-dd11-48fe-af75-e88304218faa) 
 
+In order to make gestures more quickly, I have also created a gesture recorder which allows you (the developer) to pose in real life and it records the pose you've made and saves it, so that the game can tell when that specific pose is made.
 
 ![SwayVRRain-ezgif com-resize](https://github.com/user-attachments/assets/e450474f-dd92-4b2b-b3d8-832c82891798)
 
 </div>
 
 ## Installation
+
 ### Unity Project
 - Open Unity Hub
 - Ensure you have at least Unity ```6000.1.11f1```
 - Download the ```VR Game``` file
 - Click the Add button and locate the file
 - Open the project
-### VR Ready Build
-To be added...
 
 
+### Requirements
+- Unity Hub
+- Unity Version 6000.1.11f1
+- Meta Quest 3 or 3s
+- 4GB of available space
+  
 # Showcase Video
 [![Watch the demo](https://img.youtube.com/vi/tGOtWXbLGbE/maxresdefault.jpg)](https://www.youtube.com/watch?v=tGOtWXbLGbE)
 
