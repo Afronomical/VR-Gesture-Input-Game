@@ -41,5 +41,5 @@ To be added...
 
 
 # Showcase Video
-{% include youtube.html id="tGOtWXbLGbE"}
+[![Watch the demo](https://img.youtube.com/vi/tGOtWXbLGbE/maxresdefault.jpg)](https://www.youtube.com/watch?v=tGOtWXbLGbE)
 
