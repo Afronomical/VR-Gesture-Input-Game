@@ -28,7 +28,7 @@ In order to make gestures more quickly, I have also created a gesture recorder w
 
 </div>
 
-## Installation
+## Installation & Usage
 
 ### Unity Project
 - Download the ```VR Game``` file
