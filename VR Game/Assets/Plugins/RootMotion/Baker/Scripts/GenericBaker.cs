@@ -91,7 +91,7 @@ namespace RootMotion
         {
             // TODO Length Multiplier
 
-            for (int i = 0; i < children.Length; i++) children[i].SetCurves(ref clip);
+            for (int i = 0; i < children.Length; i++) children[i].SetCurves(ref clip, keyReductionError);
         }
 
         protected override void OnSetKeyframes(float time, bool lastFrame)
@@ -126,7 +126,7 @@ namespace RootMotion
 
             if (mode != Baker.Mode.AnimationClips)
             {
-                clip.wrapMode = loop ? WrapMode.Loop : WrapMode.Default;
+                clip.wrapMode = settings.loopTime ? WrapMode.Loop : WrapMode.Default;
             }
         }
 #endif

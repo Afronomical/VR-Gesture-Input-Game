@@ -192,10 +192,10 @@ public class GestureReader : MonoBehaviour
             }
         }
         //Button checks are disabled until I can make it so it can't be used for spam
-       /* if(!CheckGestureButtons(gesture))
+       if(!CheckGestureButtons(gesture))
         {
             return false;
-        }*/
+        }
         return true; // Gesture is valid if all checks pass
 
     }

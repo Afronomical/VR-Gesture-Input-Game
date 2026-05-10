@@ -27,7 +27,7 @@ public class GestureManager : MonoBehaviour
             
         }
     }
-    //[SerializeField] Dictionary<GestureDataSO, InputState> gestureActiveStates  = new Dictionary<GestureDataSO, InputState>();
+    
     //The gesture that is targeted for adjustment
     public GestureDataSO currentDebugGesture;
 
