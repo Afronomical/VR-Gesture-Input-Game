@@ -378,16 +378,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -9017505146932081482}
-    m_Position: {x: 430, y: 100, z: 0}
+    m_Position: {x: 500, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6654476001700514478}
-    m_Position: {x: 510, y: -50, z: 0}
+    m_Position: {x: 443.2653, y: -43.96936, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2224459606169128436}
-    m_Position: {x: 720, y: -20, z: 0}
+    m_Position: {x: 478.2653, y: 21.03064, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8568124067277855138}
-    m_Position: {x: 680, y: 60, z: 0}
+    m_Position: {x: 513.26526, y: 86.03064, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7408048408680156722}
     m_Position: {x: 260, y: -90, z: 0}
@@ -460,7 +460,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mixamorig_RightHand 1
+  m_Name: RigHandAnimator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Trigger
