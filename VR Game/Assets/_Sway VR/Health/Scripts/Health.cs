@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 
 public class Health : MonoBehaviour, IDamageable
@@ -12,6 +13,9 @@ public class Health : MonoBehaviour, IDamageable
 
     bool isDead = false;
     bool deadLastFrame = false;
+
+    //Each source of damage done to the player this frame
+    public List<float> ListOfDamageSources;
 
     //Dummy class
    /* public class DamageType {
@@ -112,12 +116,13 @@ public class Health : MonoBehaviour, IDamageable
     public void HealHP(float healthToAdd)
     {
         currentHP += healthToAdd;
-        OnHealed();
+        if(OnHealed != null) { OnHealed(); }
     }
     public void DamageHP(float damageToSubtract)
     {
         currentHP -= damageToSubtract;
-        OnHarmed();
+        if(OnHarmed != null) OnHarmed();
+        
     }
     public void SetHealth(float health)
     {
