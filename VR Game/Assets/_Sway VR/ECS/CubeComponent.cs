@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace ECS
 {
+    
     public struct CubeComponent : IComponentData
     {
         public float3 moveDirection;

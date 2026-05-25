@@ -1,7 +1,7 @@
-using Unity.Entities;
 using Unity.Burst;
 using Unity.Collections;
-using Unity.Mathematics;
+using Unity.Entities;
+using Unity.Transforms;
 
 
 
@@ -25,12 +25,22 @@ namespace ECS
             {
                 Entity newEntity = ecb.Instantiate(spawner.ValueRO.prefab);
 
-                ecb.AddComponent(newEntity, new CubeComponent { moveDirection = Random.CreateFromIndex((uint)(SystemAPI.Time.ElapsedTime/SystemAPI.Time.DeltaTime)).NextFloat3(), moveSpeed = 10 });
+                ecb.AddComponent(newEntity, new CubeComponent { moveDirection = Unity.Mathematics.Random.CreateFromIndex((uint)(SystemAPI.Time.ElapsedTime/SystemAPI.Time.DeltaTime)).NextFloat3(), moveSpeed = 10 });
+
+                
 
                 spawner.ValueRW.nextSpawnTime = (float)SystemAPI.Time.ElapsedTime + spawner.ValueRO.spawnRate;
 
                 ecb.Playback(state.EntityManager);
             }
+        }
+    }
+
+    public partial struct CubeJob : IJobEntity
+    { 
+                public void Execute(ref CubeComponent cube, ref LocalTransform transform)
+        {
+
         }
     }
 }

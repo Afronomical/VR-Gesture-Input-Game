@@ -12,6 +12,11 @@ namespace ECS
     {
         [BurstCompile]
 
+        public void OnCreate(ref SystemState state)
+        {
+            state.RequireForUpdate<CubeComponent>();
+        }
+
         public void OnUpdate(ref SystemState state)
         {
             EntityManager entityManager = state.EntityManager;

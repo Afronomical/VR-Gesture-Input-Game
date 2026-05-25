@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+
+public class Health : MonoBehaviour, IDamageable
 {
     //The health of the object at this given moment
     [SerializeField]float currentHP;
@@ -9,26 +10,29 @@ public class Health : MonoBehaviour
     //CurrentHP should never really go above this value
     float maxHP;
 
+    bool isDead = false;
+    bool deadLastFrame = false;
+
     //Dummy class
-    public class Damage {
+   /* public class DamageType {
 
 
         //Should account for all factors that might be necessary when calculating damage
         //This includes: 
-        /*
+        *//*
             Dealer
             Strength
             PhysicalType
             ElementalType
             FinalOutput
-         */
+         *//*
 
         float damageValue;
         float damageType;
         float element;
 
         public float finalDamage;
-    };
+    };*/
 
     /* Health allows objects to withstand damage. Any object that can be harmed needs health
      I'll need to track how much health the owner has, how much health they should have.
@@ -45,28 +49,107 @@ public class Health : MonoBehaviour
     Naturally will need functions for all health data so that it is never adjusted or affected manually.
      */
 
-    public static event Action OnDeath;
+    //Check the state of the object. Was it hit or died this frame. Announces to all listeners
+    public event Action OnHarmed;
 
+    public event Action OnDeath;
+
+    public event Action OnHealed;
+
+
+
+    private void Start()
+    {
+        //Functions to test if events work accordingly
+
+        /*OnDeath += DeathCall;
+        OnHarmed += HitCall;*/
+    }
     private void Update()
     {
-        SetHealthValuesInRange();
+        ForceHealthValuesInRange();
+        UpdateDeathState();
+        AnnounceIfDead();
+    }
+
+   
+
+    
+    #region Death Event Management
+    public bool UpdateDeathState()
+    {
+        if ((currentHP <= 0))
+        {
+            
+            isDead = true;
+
+        }
+        else
+        {
+            isDead = false;
+        }
+
+
+        return isDead;
+    }
+    public void AnnounceIfDead()
+    {
+        if (isDead && !deadLastFrame)
+        {
+            OnDeath();
+        }
+        deadLastFrame = isDead;
+    }
+    void ForceHealthValuesInRange()
+    {
+        if (0 > currentHP) { currentHP = 0; }
+        else if (maxHP > currentHP) { currentHP = maxHP; }
+
+    }
+    #endregion
+
+    #region Modify Health values
+    public void HealHP(float healthToAdd)
+    {
+        currentHP += healthToAdd;
+        OnHealed();
+    }
+    public void DamageHP(float damageToSubtract)
+    {
+        currentHP -= damageToSubtract;
+        OnHarmed();
     }
     public void SetHealth(float health)
     {
         currentHP = health;
     }
-    void AddHealth(float healthToAdd)
+    #endregion
+
+    #region Getters
+    public float GetHealthPercentage()
     {
-        currentHP += healthToAdd;
+        if(maxHP <= 0) {  return 0; }
+
+        return currentHP / maxHP;
     }
-    void SetHealthValuesInRange()
+
+    public float GetCurrentHP()
     {
-        if (0 > currentHP) { currentHP = 0; }
-        if (maxHP > currentHP) { currentHP = maxHP; }
+        return currentHP;
     }
-    public void DamageObject(Damage damage)
+    public float GetMaxHP()
     {
-        AddHealth(damage.finalDamage);
+        return maxHP; 
+    }
+    #endregion
+
+    void DeathCall()
+    {
+        Debug.Log("Has died");
+    }
+    void HarmedCall()
+    {
+        Debug.Log("Was harmed");
     }
 
 }
