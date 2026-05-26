@@ -3858,6 +3858,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -5020021711290041308, guid: 8a53375aa16f80f41b345f4bd055207f, type: 3}
+    - target: {fileID: 137063153582069300, guid: 9d6944272ca1ef448a6c08e77fec10f0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 102634a772cff4340b77c3246701a85a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63093,6 +63097,10 @@ PrefabInstance:
     - target: {fileID: 2356834012325019970, guid: ccb81867bdce32c4e95982440e8b64f0, type: 3}
       propertyPath: pushForce
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466678856043830486, guid: ccb81867bdce32c4e95982440e8b64f0, type: 3}
+      propertyPath: flamethrowerGO
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2496602990599834306, guid: ccb81867bdce32c4e95982440e8b64f0, type: 3}
       propertyPath: abilities.Array.size
