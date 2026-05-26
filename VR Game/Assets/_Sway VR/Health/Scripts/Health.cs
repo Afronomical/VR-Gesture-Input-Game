@@ -9,7 +9,7 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField]float currentHP;
 
     //CurrentHP should never really go above this value
-    float maxHP;
+    [SerializeField] float maxHP;
 
     bool isDead = false;
     bool deadLastFrame = false;
@@ -68,6 +68,7 @@ public class Health : MonoBehaviour, IDamageable
 
         /*OnDeath += DeathCall;
         OnHarmed += HitCall;*/
+        currentHP = maxHP;
     }
     private void Update()
     {
@@ -98,7 +99,7 @@ public class Health : MonoBehaviour, IDamageable
     }
     public void AnnounceIfDead()
     {
-        if (isDead && !deadLastFrame)
+        if (isDead && !deadLastFrame && OnDeath != null)
         {
             OnDeath();
         }
@@ -106,8 +107,8 @@ public class Health : MonoBehaviour, IDamageable
     }
     void ForceHealthValuesInRange()
     {
-        if (0 > currentHP) { currentHP = 0; }
-        else if (maxHP > currentHP) { currentHP = maxHP; }
+        if (currentHP < 0) { currentHP = 0; }
+        else if (currentHP > maxHP) { currentHP = maxHP; }
 
     }
     #endregion
@@ -135,7 +136,7 @@ public class Health : MonoBehaviour, IDamageable
     {
         if(maxHP <= 0) {  return 0; }
 
-        return currentHP / maxHP;
+        return (currentHP / maxHP) * 100;
     }
 
     public float GetCurrentHP()
