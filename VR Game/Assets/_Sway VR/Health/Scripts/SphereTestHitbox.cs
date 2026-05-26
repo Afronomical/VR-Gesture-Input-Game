@@ -3,6 +3,7 @@ using UnityEngine;
 public class SphereTestHitbox : MonoBehaviour
 {
 
+    public GameObject hitParticle;
     public float damageTotal = 5;
     private void OnCollisionEnter(Collision collision)
     {
@@ -12,6 +13,6 @@ public class SphereTestHitbox : MonoBehaviour
             GO.GetComponent<IDamageable>().DamageHP(damageTotal);
         }
         
-        
+        Instantiate(hitParticle);
     }
 }

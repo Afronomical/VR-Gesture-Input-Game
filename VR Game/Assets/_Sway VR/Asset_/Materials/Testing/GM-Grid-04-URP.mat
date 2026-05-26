@@ -21,19 +21,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GM-Grid-04-URP
-  m_Shader: {fileID: -6465566751694194690, guid: b4bb8b5c4862a416fa38d705dedc4d96, type: 3}
+  m_Shader: {fileID: 4800000, guid: 71d6765ad72e11541bc1448c891bbcf9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _BLEND_MODE_SCREEN
-  - _COORDINATES_OBJECT
-  m_InvalidKeywords:
-  - _BLEND_MODE_ADD
-  - _EMISSION
+  - PROPIXELIZER_DITHERING_ON
+  - RECEIVE_SHADOWS_ON
+  - USE_OBJECT_POSITION_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -41,6 +40,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Base_Map_Sides:
         m_Texture: {fileID: 2800000, guid: 94051d232a3fb43fb8f02bfbd659f735, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -49,11 +52,27 @@ Material:
         m_Texture: {fileID: 2800000, guid: 94051d232a3fb43fb8f02bfbd659f735, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Base_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Emission_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission_Texture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightingRamp:
+        m_Texture: {fileID: 2800000, guid: 211497300d75d8e4b9b3e2913a93e908, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -67,6 +86,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Metallic_Txture:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PaletteLUT:
+        m_Texture: {fileID: 2800000, guid: cb20b3bfa4de9cd4084d3626193b6898, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_4d14e7594c4941fb83ff05a960a13fde_Texture_1_Texture2D:
@@ -103,7 +130,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - COLOR_GRADING: 0
+    - PROPIXELIZER_DITHERING: 1
+    - RECEIVE_SHADOWS: 1
+    - USE_OBJECT_POSITION: 1
     - _AlphaClip: 0
+    - _AlphaClipThreshold: 0.5
     - _AlphaToMask: 0
     - _BLEND_MODE: 3
     - _Base_Map_Multiplier: 2
@@ -116,6 +148,7 @@ Material:
     - _COORDINATES: 0
     - _CastShadows: 1
     - _Cull: 2
+    - _DiffuseVertexColorWeight: 1
     - _Dirt: 0
     - _Dirt_Blend: 0.5
     - _Dirt_Height: 0.5
@@ -124,10 +157,13 @@ Material:
     - _Emission: 0
     - _Emission_Map_Multiplier: 1
     - _Emission_Tiling: 1
+    - _EmissiveVertexColorWeight: 0
+    - _ID: 1
     - _Metallic: 0.5
     - _Metallic_Map_Multiplier: 1
     - _Metallic_Tiling: 1
     - _Offset1: 0
+    - _PixelSize: 3
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -141,13 +177,19 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _Base_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+    - _AmbientLight: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Base_Color: {r: 0, g: 1, b: 0.3529412, a: 1}
     - _Base_Color_Sides: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
     - _Base_Color_Top: {r: 0.30980393, g: 0.26666668, b: 0.92156863, a: 1}
     - _Base_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Dirt_Color: {r: 0.18592346, g: 0.07008722, b: 0.33018863, a: 0}
+    - _EdgeHighlightColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 0}
     - _Emission_Color: {r: 0, g: 0, b: 0, a: 0}
     - _Offset: {r: 1, g: 0.5, b: 0, a: 0}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - _PixelGridOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _Side_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
     - _Side_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Sides_Color: {r: 0.4509804, g: 0.4509804, b: 0.4509804, a: 0}
