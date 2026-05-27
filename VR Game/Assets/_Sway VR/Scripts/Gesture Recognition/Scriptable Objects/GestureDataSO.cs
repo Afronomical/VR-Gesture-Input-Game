@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GestureDataSO", menuName = "Gesture/GestureDataSO")]
+[CreateAssetMenu(fileName = "GestureDataSO", menuName = "SwayVR/GestureDataSO")]
 public class GestureDataSO : ScriptableObject
 {
     public string GestureName;

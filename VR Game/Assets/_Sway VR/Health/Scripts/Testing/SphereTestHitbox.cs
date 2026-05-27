@@ -5,8 +5,15 @@ public class SphereTestHitbox : MonoBehaviour
 {
 
     public GameObject hitParticle;
-    public float damageTotal = 5;
+    public int damageTotal = 5;
+    public StatusDataSO effectDataSO;
+    public StatusEffectData effectData = new StatusEffectData();
 
+    private void Start()
+    {
+        
+        effectData.SetupData(effectDataSO);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,7 +22,10 @@ public class SphereTestHitbox : MonoBehaviour
         {
             GO.GetComponent<IDamageable>().DamageHP(damageTotal);
         }
-        
+        if(GO.GetComponent<IStatusEffectable>() != null)
+        {
+            GO.GetComponent<IStatusEffectable>().ApplyEffect(effectData);
+        }
 
 
         Instantiate(hitParticle, collision.contacts[0].point, Quaternion.FromToRotation(gameObject.transform.position, collision.gameObject.transform.position) );

@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IDamageable
 {
-    void DamageHP(float damage);
+    void DamageHP(int damage);
 }

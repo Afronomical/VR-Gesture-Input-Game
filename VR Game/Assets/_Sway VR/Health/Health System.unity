@@ -119,19 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &52599631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809021591128997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb27de325905a040bc384041faac106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flame: {fileID: 198879910461146582}
 --- !u!1 &179669758
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +350,7 @@ GameObject:
   - component: {fileID: 224886171}
   - component: {fileID: 224886176}
   - component: {fileID: 224886177}
+  - component: {fileID: 224886178}
   m_Layer: 0
   m_Name: Healthy Cube
   m_TagString: Untagged
@@ -504,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 10.82
-  maxHP: 20
+  maxHP: 116.3
   ListOfDamageSources: []
 --- !u!114 &224886177
 MonoBehaviour:
@@ -519,11 +507,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 0}
-  initialDeathParticles: {fileID: 560201217251463992}
+  initialDeathParticles: {fileID: 1809021591128997}
   hurtParticles: {fileID: 1125694480901322850}
   deathParticles: {fileID: 1392961102958546}
   harmedParticles: {fileID: 1067536107913526}
   isNewHealthState: 0
+--- !u!114 &224886178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224886170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4940bc1dc5fac9547b5dc4883c5ba20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusType: 0
+  stacks: 1
+  StatusEffectStacks: 
 --- !u!1 &396369868
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitParticle: {fileID: 1643851402782444, guid: 4f703a1da613efc43b08b1d2bdcfd49f, type: 3}
   damageTotal: 5
+  effectDataSO: {fileID: 0}
 --- !u!135 &866007818
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1041,7 +1045,7 @@ Transform:
   m_GameObject: {fileID: 866007815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.82, y: 4.132, z: 1.494}
+  m_LocalPosition: {x: 1.7, y: 3.603, z: 1.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1663,9 +1667,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4150652048383405}
-  - component: {fileID: 198195350664546275}
   - component: {fileID: 199942671485192207}
-  - component: {fileID: 52599631}
+  - component: {fileID: 198195350664546275}
   m_Layer: 0
   m_Name: FX_Fire_Explosion_01
   m_TagString: Untagged
@@ -77930,7 +77933,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -83046,7 +83049,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0

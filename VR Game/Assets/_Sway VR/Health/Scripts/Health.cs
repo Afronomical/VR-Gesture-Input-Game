@@ -6,10 +6,10 @@ using System.Collections.Generic;
 public class Health : MonoBehaviour, IDamageable
 {
     //The health of the object at this given moment
-    [SerializeField]float currentHP;
+    [SerializeField]int currentHP;
 
     //CurrentHP should never really go above this value
-    [SerializeField] float maxHP;
+    [SerializeField] int maxHP = 10;
 
     bool isDead = false;
     bool deadLastFrame = false;
@@ -114,18 +114,18 @@ public class Health : MonoBehaviour, IDamageable
     #endregion
 
     #region Modify Health values
-    public void HealHP(float healthToAdd)
+    public void HealHP(int healthToAdd)
     {
         currentHP += healthToAdd;
         if(OnHealed != null) { OnHealed(); }
     }
-    public void DamageHP(float damageToSubtract)
+    public void DamageHP(int damageToSubtract)
     {
         currentHP -= damageToSubtract;
         if(OnHarmed != null) OnHarmed();
         
     }
-    public void SetHealth(float health)
+    public void SetHealth(int health)
     {
         currentHP = health;
     }
@@ -136,7 +136,7 @@ public class Health : MonoBehaviour, IDamageable
     {
         if(maxHP <= 0) {  return 0; }
 
-        return (currentHP / maxHP) * 100;
+        return ((float)currentHP / (float)maxHP) * 100;
     }
 
     public float GetCurrentHP()

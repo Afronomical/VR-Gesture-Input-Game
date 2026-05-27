@@ -35,6 +35,7 @@ public class TestCubeDamageFX : MonoBehaviour
 
 
         previousHealthState = healthState;
+       // Debug.Log("Current HealthState " + healthState " and percentage is " + health.GetHeal );
     }
     bool GetIsNewHealthState()
     {
