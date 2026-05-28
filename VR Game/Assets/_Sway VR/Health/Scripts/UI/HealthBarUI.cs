@@ -5,11 +5,14 @@ public class HealthBarUI : MonoBehaviour
 {
     [SerializeField]Health health;
     [SerializeField] Image healthBar;
-    [SerializeField] Image laggedHealthBar;
+    [SerializeField] Image healthEcho;
 
     [SerializeField] float targetHealth;
-    [SerializeField] float laggingHealth;
-    [SerializeField] float lagSpeed = 1;
+    [SerializeField] float targetHealthFillSpeed = 1f;
+
+
+    
+    [SerializeField] float healthEchoFillSpeed = 0.1f;
 
     Camera cam;
 
@@ -28,7 +31,8 @@ public class HealthBarUI : MonoBehaviour
         targetHealth = health.GetHealthPercentage() / 100;
         healthBar.fillAmount = targetHealth;
 
-        laggedHealthBar.fillAmount = Mathf.Lerp(laggedHealthBar.fillAmount, targetHealth, lagSpeed);
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, targetHealth, targetHealthFillSpeed);
+        healthEcho.fillAmount = Mathf.Lerp(healthEcho.fillAmount, targetHealth, healthEchoFillSpeed);
     }
     void FaceTheCamera()
     {
