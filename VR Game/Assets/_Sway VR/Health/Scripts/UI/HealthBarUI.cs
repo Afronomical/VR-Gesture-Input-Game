@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HealthBarUI : MonoBehaviour
 {
-    [SerializeField]Health health;
+    [SerializeField] Health health;
     [SerializeField] Image healthBar;
     [SerializeField] Image healthEcho;
 
@@ -29,7 +29,7 @@ public class HealthBarUI : MonoBehaviour
     void UpdateHealthBar()
     {
         targetHealth = health.GetHealthPercentage() / 100;
-        healthBar.fillAmount = targetHealth;
+        
 
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, targetHealth, targetHealthFillSpeed);
         healthEcho.fillAmount = Mathf.Lerp(healthEcho.fillAmount, targetHealth, healthEchoFillSpeed);
@@ -37,7 +37,7 @@ public class HealthBarUI : MonoBehaviour
     void FaceTheCamera()
     {
         
-            transform.rotation = Quaternion.LookRotation(transform.position - cam.transform.position);
+        transform.rotation = Quaternion.LookRotation(transform.position - cam.transform.position);
         
     }
 }
