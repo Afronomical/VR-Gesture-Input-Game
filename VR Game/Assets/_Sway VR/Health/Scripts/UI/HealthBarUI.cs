@@ -6,12 +6,12 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] Health health;
 
     [SerializeField] Image healthBar;
-    [SerializeField] Image healthEcho;
+    [SerializeField] Image healthBarTrail;
 
-    [SerializeField] float targetHealth;
-    [SerializeField] float targetHealthFillSpeed = 1f;
+    float targetHealth;
+    [SerializeField] float healthFillSpeed = 10f;
     
-    [SerializeField] float healthEchoFillSpeed = 0.1f;
+    [SerializeField] float trailFillSpeed = 2f;
 
     Camera cam;
 
@@ -34,16 +34,12 @@ public class HealthBarUI : MonoBehaviour
         targetHealth = health.GetHealthPercentage() / 100;
         
 
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, targetHealth, targetHealthFillSpeed * Time.deltaTime);
-        healthEcho.fillAmount = Mathf.Lerp(healthEcho.fillAmount, targetHealth, healthEchoFillSpeed * Time.deltaTime);
-
-        
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, targetHealth, healthFillSpeed * Time.deltaTime);
+        healthBarTrail.fillAmount = Mathf.Lerp(healthBarTrail.fillAmount, targetHealth, trailFillSpeed * Time.deltaTime);
     }
     void FaceTheCamera()
     {
-        
         transform.rotation = Quaternion.LookRotation(transform.position - cam.transform.position);
-        
     }
     
     
