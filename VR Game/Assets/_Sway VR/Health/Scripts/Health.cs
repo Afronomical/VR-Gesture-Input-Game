@@ -119,10 +119,12 @@ public class Health : MonoBehaviour, IDamageable
         currentHP += healthToAdd;
         if(OnHealed != null) { OnHealed(); }
     }
-    public void DamageHP(int damageToSubtract)
+    public bool DamageHP(int damageToSubtract)
     {
         currentHP -= damageToSubtract;
         if(OnHarmed != null) OnHarmed();
+
+        return currentHP > 0;
         
     }
     public void SetHealth(int health)

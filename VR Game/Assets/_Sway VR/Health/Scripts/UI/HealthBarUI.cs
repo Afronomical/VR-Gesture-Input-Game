@@ -13,21 +13,18 @@ public class HealthBarUI : MonoBehaviour
     
     [SerializeField] float trailFillSpeed = 2f;
 
-    Camera cam;
+    
 
     
 
     private void Start()
     {
-        cam = Camera.main;
+        
     }
 
     private void Update()
     {
-        UpdateHealthBar();
-        FaceTheCamera();
-
-        
+        UpdateHealthBar();  
     }
     void UpdateHealthBar()
     {
@@ -37,10 +34,7 @@ public class HealthBarUI : MonoBehaviour
         healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, targetHealth, healthFillSpeed * Time.deltaTime);
         healthBarTrail.fillAmount = Mathf.Lerp(healthBarTrail.fillAmount, targetHealth, trailFillSpeed * Time.deltaTime);
     }
-    void FaceTheCamera()
-    {
-        transform.rotation = Quaternion.LookRotation(transform.position - cam.transform.position);
-    }
+    
     
     
 }
