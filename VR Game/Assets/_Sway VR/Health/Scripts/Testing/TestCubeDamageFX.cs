@@ -26,6 +26,12 @@ public class TestCubeDamageFX : MonoBehaviour
         health.OnDeath += DeathBurnFX;
         health.OnHarmed += HarmedFX;
     }
+    
+    private void OnDisable()
+    {
+        health.OnDeath -= DeathBurnFX;
+        health.OnHarmed -= HarmedFX;
+    }
 
     private void Update()
     {

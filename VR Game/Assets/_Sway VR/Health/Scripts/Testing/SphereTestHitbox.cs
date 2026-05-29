@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -12,12 +13,12 @@ public class SphereTestHitbox : MonoBehaviour
     public StatusEffectData effectData = new StatusEffectData();
     public Color dmgColour = Color.white;
 
+    public event Action<int> OnDamage;
     private void Start()
     {
         
         effectData.SetupData(effectDataSO);
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         GameObject GO = collision.gameObject;
@@ -28,6 +29,7 @@ public class SphereTestHitbox : MonoBehaviour
                 GameObject popUp = Instantiate(damagePopUp, collision.contacts[0].point + dmgPopUpOffset, Quaternion.identity);
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateDamageText(damageTotal);
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateColour(dmgColour);
+                //OnDamage(damageTotal);
             }
             
 

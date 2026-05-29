@@ -13,14 +13,6 @@ public class HealthBarUI : MonoBehaviour
     
     [SerializeField] float trailFillSpeed = 2f;
 
-    
-
-    
-
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -28,6 +20,7 @@ public class HealthBarUI : MonoBehaviour
     }
     void UpdateHealthBar()
     {
+        if(health == null) { Debug.LogWarning("Health reference missing from HealthBarUI Component");  return; }
         targetHealth = health.GetHealthPercentage() / 100;
         
 
