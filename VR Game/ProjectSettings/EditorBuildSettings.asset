@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Sway VR/Scenes/TestingZone.unity
+    path: Assets/_Sway VR/Scenes/Old Versions/TestingZone.unity
     guid: 203c091d5f97f8c40a48c73933a27057
   - enabled: 1
-    path: Assets/_Sway VR/Scenes/Practice.unity
+    path: Assets/_Sway VR/Scenes/Old Versions/OG Level.unity
     guid: da0b429dc9d498044a798bfc0e2ac2a6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}

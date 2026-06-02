@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.5298049, g: 0.8641549, b: 0.9308176, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1789602482}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -541,7 +541,7 @@ MonoBehaviour:
   dmgPopUpOffset: {x: 0, y: 2, z: 0}
   damageTotal: 5
   effectDataSO: {fileID: 11400000, guid: dd4816b53f8ad8f45a1a22cb09268729, type: 2}
-  dmgColour: {r: 0, g: 0, b: 0, a: 1}
+  dmgColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!135 &866007818
 SphereCollider:
   m_ObjectHideFlags: 0

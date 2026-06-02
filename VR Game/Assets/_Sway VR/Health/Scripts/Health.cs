@@ -6,13 +6,13 @@ using System.Collections.Generic;
 public class Health : MonoBehaviour, IDamageable
 {
     //The health of the object at this given moment
-    [SerializeField]int currentHP;
+    [SerializeField]protected int currentHP;
 
     //CurrentHP should never really go above this value
-    [SerializeField] int maxHP = 10;
+    [SerializeField] protected int maxHP = 10;
 
-    bool isDead = false;
-    bool deadLastFrame = false;
+    protected bool isDead = false;
+    protected bool deadLastFrame = false;
 
     //Each source of damage done to the player this frame
     public List<float> ListOfDamageSources;
@@ -62,7 +62,7 @@ public class Health : MonoBehaviour, IDamageable
 
 
 
-    private void Start()
+    protected virtual void Start()
     {
         //Functions to test if events work accordingly
 
@@ -70,7 +70,7 @@ public class Health : MonoBehaviour, IDamageable
         OnHarmed += HitCall;*/
         currentHP = maxHP;
     }
-    private void Update()
+    protected virtual void Update()
     {
         ForceHealthValuesInRange();
         UpdateDeathState();
@@ -105,7 +105,7 @@ public class Health : MonoBehaviour, IDamageable
         }
         deadLastFrame = isDead;
     }
-    void ForceHealthValuesInRange()
+    protected virtual void ForceHealthValuesInRange()
     {
         if (currentHP < 0) { currentHP = 0; }
         else if (currentHP > maxHP) { currentHP = maxHP; }
