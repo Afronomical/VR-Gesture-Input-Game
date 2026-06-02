@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -5,9 +6,12 @@ using UnityEngine;
 
 public class Projectile :  Hitbox
 {
-    public float damage = 1f;
-    public float hitstun = 0.5f;
-    public float launchSpeed = 10f;
-    public Vector3 launchDirection = Vector3.forward;
+    public GameObject hitParticle;
+    public GameObject damagePopUp;
+    public Vector3 dmgPopUpOffset;
+    public int damage = 5;
+    public StatusDataSO effectDataSO;
+    public StatusEffectData effectData = new StatusEffectData();
+    public Color dmgColour = Color.orangeRed;
 
 }

@@ -48293,7 +48293,7 @@ GameObject:
   - component: {fileID: 6459546067648992359}
   - component: {fileID: 3552622275773945551}
   m_Layer: 0
-  m_Name: Mecha Cube Nothing
+  m_Name: Health Cube Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

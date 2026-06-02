@@ -5,6 +5,8 @@ public class AbilityManager : MonoBehaviour
     [SerializeField] List<Ability> abilities;
 
     public GameObject player;
+    public GameObject leftHand;
+    public GameObject rightHand;
 
     
 

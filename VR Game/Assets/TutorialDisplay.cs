@@ -30,7 +30,13 @@ public class TutorialDisplay : MonoBehaviour
         {
             currentGestureData = targetedAbility.requiredGestures[gestureIndex];
         }
-        currentGestureData = targetedAbility.requiredGestures[targetedAbility.GetGestureIndex()];
+
+        if (gestureIndex <= targetedAbility.requiredGestures.Length)
+        {
+
+            currentGestureData = targetedAbility.requiredGestures[targetedAbility.GetGestureIndex()];
+
+        }
         CheckRight();
         CheckLeft();
         if (manager.CheckGesture(currentGestureData))

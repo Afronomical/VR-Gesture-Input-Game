@@ -6,9 +6,11 @@ using System;
 public abstract class Ability : MonoBehaviour
 {
 
-    [SerializeField]protected GameObject playerHead;
+    [HideInInspector]protected GameObject playerHead;
+    [HideInInspector]protected GameObject leftHand;
+    [HideInInspector]protected GameObject rightHand;
     public string abilityName = "DefaultAbilityName";
-    [Tooltip("The time the player must complete the gestures, in order to activate the ability")]
+    [Tooltip("The time limit in which the player must complete the gestures, in order to activate the ability")]
     public float activationTimer = 1f;
 
     [Tooltip("The time the player must wait to activate the ability since the previous activation")]
@@ -40,6 +42,8 @@ public abstract class Ability : MonoBehaviour
     protected virtual void Start()
     {
         playerHead = abilityManager.player;
+        leftHand = abilityManager.leftHand;
+        rightHand = abilityManager.rightHand;
     }
     protected virtual void OnEnable()
     {
