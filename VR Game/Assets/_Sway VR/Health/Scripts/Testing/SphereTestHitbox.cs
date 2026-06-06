@@ -8,7 +8,7 @@ public class SphereTestHitbox : MonoBehaviour
     public GameObject hitParticle;
     public GameObject damagePopUp;
     public Vector3 dmgPopUpOffset;
-    public int damageTotal = 5;
+    public DamageDataSO damageData;
 
     public Color dmgColour = Color.white;
 
@@ -23,10 +23,10 @@ public class SphereTestHitbox : MonoBehaviour
         GameObject GO = collision.gameObject;
         if (GO.GetComponent<IDamageable>() != null)
         {
-            if (GO.GetComponent<IDamageable>().DamageHP(damageTotal))
+            if (GO.GetComponent<IDamageable>().Damage(damageData))
             {
                 GameObject popUp = Instantiate(damagePopUp, collision.contacts[0].point + dmgPopUpOffset, Quaternion.identity);
-                popUp.GetComponent<DamagePopUpTextUpdater>().UpdateDamageText(damageTotal);
+                popUp.GetComponent<DamagePopUpTextUpdater>().UpdateDamageText(damageData.damageVal);
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateColour(dmgColour);
                 //OnDamage(damageTotal);
             }

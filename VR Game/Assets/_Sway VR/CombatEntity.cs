@@ -3,8 +3,8 @@ using UnityEngine;
 public class CombatEntity : MonoBehaviour, IDamageable
 {
     [SerializeField] Health health;
-    class StatusEffectsHandler { };
-    [SerializeField] StatusEffectsHandler statusEffectsHandler;
+    
+    [SerializeField] StatusEffectHandler statusEffectsHandler;
 
 
     private void Start()
@@ -15,6 +15,7 @@ public class CombatEntity : MonoBehaviour, IDamageable
     }
     public bool Damage(DamageDataSO dmgData)
     {
-        return true;
+
+        return health.DamageHP(dmgData.damageVal);
     }
 }

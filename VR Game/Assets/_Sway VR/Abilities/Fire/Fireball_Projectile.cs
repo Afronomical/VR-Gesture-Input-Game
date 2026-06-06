@@ -23,7 +23,7 @@ public class Fireball_Projectile : Projectile
         GameObject GO = collision.gameObject;
         if (GO.GetComponent<IDamageable>() != null)
         {
-            if (GO.GetComponent<IDamageable>().DamageHP(damageData))
+            if (GO.GetComponent<IDamageable>().Damage(damageData))
             {
                 GameObject popUp = Instantiate(damagePopUp, collision.contacts[0].point + dmgPopUpOffset, Quaternion.identity);
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateDamageText(damageData.damageVal);
