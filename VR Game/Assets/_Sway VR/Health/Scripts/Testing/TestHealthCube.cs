@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestHealthCube : Health
+public class TestHealthCube : CombatEntity
 {
     [SerializeField] List<int> statusList;
 

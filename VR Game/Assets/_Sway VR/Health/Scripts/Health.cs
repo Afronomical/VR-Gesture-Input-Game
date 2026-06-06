@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-public class Health : MonoBehaviour, IDamageable
+public class Health : MonoBehaviour
 {
     //The health of the object at this given moment
     [SerializeField]protected int currentHP;
@@ -133,19 +133,7 @@ public class Health : MonoBehaviour, IDamageable
         
     }
 
-    public bool DamageHP(int damageToSubtract, EStatusEffectType statusDamage, float buildUpAmount)
-    {
-        currentHP -= damageToSubtract;
-        if (OnHarmed != null) OnHarmed();
 
-        /*if (statusEffectManager != null)
-        {
-            statusEffectManager.OnStatusTriggerBuildup(statusDamage, buildUpAmount);
-        }*/
-
-        return currentHP > 0;
-
-    }
     public void SetHealth(int health)
     {
         currentHP = health;
