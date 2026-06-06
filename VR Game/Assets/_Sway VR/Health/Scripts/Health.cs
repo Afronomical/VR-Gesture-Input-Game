@@ -5,19 +5,18 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-    //The health of the object at this given moment
-    [SerializeField]protected int currentHP;
+    
+    [SerializeField, Tooltip("The health of the object at this given moment")]
+    protected int currentHP;
 
-    //CurrentHP should never really go above this value
-    [SerializeField] protected int maxHP = 10;
+    
+    [SerializeField, Tooltip("CurrentHP should never really go above this value")] 
+    protected int maxHP = 10;
 
     protected bool isDead = false;
     protected bool deadLastFrame = false;
 
-    //Each source of damage done to the player this frame
-    public List<float> ListOfDamageSources;
 
-    //StatusEffectManager statusEffectManager;
     //Dummy class
    /* public class DamageType {
 
@@ -71,7 +70,7 @@ public class Health : MonoBehaviour
         OnHarmed += HitCall;*/
         currentHP = maxHP;
 
-        //statusEffectManager = GetComponent<StatusEffectManager>();
+        
     }
     protected virtual void Update()
     {
