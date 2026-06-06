@@ -17,6 +17,7 @@ public class Health : MonoBehaviour, IDamageable
     //Each source of damage done to the player this frame
     public List<float> ListOfDamageSources;
 
+    //StatusEffectManager statusEffectManager;
     //Dummy class
    /* public class DamageType {
 
@@ -69,6 +70,8 @@ public class Health : MonoBehaviour, IDamageable
         /*OnDeath += DeathCall;
         OnHarmed += HitCall;*/
         currentHP = maxHP;
+
+        //statusEffectManager = GetComponent<StatusEffectManager>();
     }
     protected virtual void Update()
     {
@@ -124,8 +127,24 @@ public class Health : MonoBehaviour, IDamageable
         currentHP -= damageToSubtract;
         if(OnHarmed != null) OnHarmed();
 
+        
+
         return currentHP > 0;
         
+    }
+
+    public bool DamageHP(int damageToSubtract, EStatusEffectType statusDamage, float buildUpAmount)
+    {
+        currentHP -= damageToSubtract;
+        if (OnHarmed != null) OnHarmed();
+
+        /*if (statusEffectManager != null)
+        {
+            statusEffectManager.OnStatusTriggerBuildup(statusDamage, buildUpAmount);
+        }*/
+
+        return currentHP > 0;
+
     }
     public void SetHealth(int health)
     {

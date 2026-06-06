@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestHealthCube : Health, IStatusEffectable
+public class TestHealthCube : Health
 {
     [SerializeField] List<int> statusList;
 
-    private void Start()
+   /* private void Start()
     {
         //Ensure the list has the amount of values in the Status Index. Syncing the two "Arrays"
-        for(int i = statusList.Count; i < Enum.GetValues(typeof(E_StatusIndex)).Length; i++)
+        for(int i = statusList.Count; i < Enum.GetValues(typeof(EStatusEffectType)).Length; i++)
         {
             statusList.Add(0);
         }
@@ -19,7 +19,7 @@ public class TestHealthCube : Health, IStatusEffectable
         int newEffectType = (int)effectData.GetStatusType();
 
         statusList[(int)effectData.GetStatusType()] += effectData.GetStacks();
-        int numOfTypes = Enum.GetValues(typeof(E_StatusIndex)).Length;
+        int numOfTypes = Enum.GetValues(typeof(EStatusEffectType)).Length;
         //Debug.Log(statusList[(int)effectData.GetStatusType()].ToString());
     }
     public void RemoveEffect(StatusEffectData effectData)
@@ -43,5 +43,5 @@ public class TestHealthCube : Health, IStatusEffectable
     public void ClearEffect(StatusEffectData effectData)
     {
         statusList[(int)effectData.GetStatusType()] = 0;
-    }
+    }*/
 }

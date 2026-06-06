@@ -9,9 +9,9 @@ public class Projectile :  Hitbox
     public GameObject hitParticle;
     public GameObject damagePopUp;
     public Vector3 dmgPopUpOffset;
-    public int damage = 5;
-    public StatusDataSO effectDataSO;
-    public StatusEffectData effectData = new StatusEffectData();
-    public Color dmgColour = Color.orangeRed;
+    public DamageDataSO damageData;
+/*    public StatusDataSO effectDataSO;
+    public StatusEffectData effectData = new StatusEffectData();*/
+    
 
 }

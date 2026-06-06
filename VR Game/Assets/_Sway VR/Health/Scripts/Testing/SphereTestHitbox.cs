@@ -9,15 +9,14 @@ public class SphereTestHitbox : MonoBehaviour
     public GameObject damagePopUp;
     public Vector3 dmgPopUpOffset;
     public int damageTotal = 5;
-    public StatusDataSO effectDataSO;
-    public StatusEffectData effectData = new StatusEffectData();
+
     public Color dmgColour = Color.white;
 
     public event Action<int> OnDamage;
     private void Start()
     {
         
-        effectData.SetupData(effectDataSO);
+        //effectData.SetupData(effectDataSO);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,10 +33,10 @@ public class SphereTestHitbox : MonoBehaviour
             
 
         }
-        if(GO.GetComponent<IStatusEffectable>() != null)
+        /*if(GO.GetComponent<IStatusEffectable>() != null)
         {
             GO.GetComponent<IStatusEffectable>().ApplyEffect(effectData);
-        }
+        }*/
 
 
         Instantiate(hitParticle, collision.contacts[0].point, Quaternion.FromToRotation(gameObject.transform.position, collision.gameObject.transform.position) );
