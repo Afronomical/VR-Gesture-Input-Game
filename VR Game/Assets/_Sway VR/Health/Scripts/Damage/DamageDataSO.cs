@@ -16,10 +16,10 @@ public class DamageDataSO : ScriptableObject
     {  get { return _statusType; } set { _statusType = value; } }
 
 
-    [SerializeField, Tooltip("The amount of x element added by this attack. Ex: +3 Burn")]
-    private int _statusStacksAdded = 1;
-    private int statusStacksAdded 
-    {  get { return _statusStacksAdded; } set { _statusStacksAdded = value; } }
+    [SerializeField, Tooltip("The amount of ''x'' status added by this attack. Ex: +3 Burn")]
+    private int _statusStacks = 0;
+    public int statusStacks 
+    {  get { return _statusStacks; } set { _statusStacks = value; } }
 
 
     [SerializeField, Tooltip("How long an object damaged by this gets stunned for")]
@@ -32,6 +32,15 @@ public class DamageDataSO : ScriptableObject
     private float _hitStrength = 0.0f;
     public float hitStrength 
     { get { return _hitStrength; } }
+
+
+    [SerializeField, Tooltip("The effect that plays on impact with another object")]
+    private GameObject _hitEffect;
+    public GameObject hitEffect
+    { get { return _hitEffect; } }
+
+
+    
 
     //new conventions as I'm messing around with Getters and setters
 }

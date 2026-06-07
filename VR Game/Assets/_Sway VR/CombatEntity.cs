@@ -15,6 +15,7 @@ public class CombatEntity : MonoBehaviour, IDamageable
     }
     public bool Damage(DamageDataSO dmgData)
     {
+        statusEffectsHandler.ApplyEffect(dmgData.statusType, dmgData.statusStacks);
 
         return health.DamageHP(dmgData.damageVal);
     }

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 398dad7a48b24684ea09f3d3d0ef8dc1, type: 3}
-  m_Name: DamageDataSO
+  m_Name: FireballDamageSO
   m_EditorClassIdentifier: 
   _damageVal: 4
-  _statusType: {fileID: 11400000, guid: 0e43eea48a3d2a645b05f7b2bc31a10c, type: 2}
-  _statusStacksAdded: 1
+  _statusType: {fileID: 11400000, guid: 830ac6d6825dfd8448b036acf0987273, type: 2}
+  _statusStacks: 5
   _hitStun: 0
   _hitStrength: 0
+  _hitEffect: {fileID: 0}

@@ -11,16 +11,16 @@ public class StatusEffectSO : ScriptableObject
 
     [SerializeField, Space ,Header("UI Elements")]
     [Tooltip("The colour shown on: damagePopUps, IconBackgrounds and anywhere this element is represented")]
-    private Color color;
+    private Color color = Color.white;
 
     [SerializeField, Tooltip("The Icon used to represent this element")]
     private Sprite icon;
 
-    
 
     //public EStatusEffectType Status { get { return status; } }
     public Color Color { get { return color; } }
     public Sprite Icon { get { return icon; } }
+    public float duration { get { return duration; } }
 
     public virtual void OnActivate(StatusEffectHandler handler) { }
     public virtual void OnTick(StatusEffectHandler handler) { }
