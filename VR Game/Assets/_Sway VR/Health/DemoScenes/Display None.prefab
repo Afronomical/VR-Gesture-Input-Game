@@ -429,9 +429,8 @@ MonoBehaviour:
   hitParticle: {fileID: 1643851402782444, guid: 4f703a1da613efc43b08b1d2bdcfd49f, type: 3}
   damagePopUp: {fileID: 8999099737423263062, guid: 8259d9485cd928042a969b764f4a1d9c, type: 3}
   dmgPopUpOffset: {x: 0, y: 2, z: 0}
-  damageTotal: 5
-  effectDataSO: {fileID: 11400000, guid: dd4816b53f8ad8f45a1a22cb09268729, type: 2}
-  dmgColour: {r: 1, g: 1, b: 1, a: 1}
+  damageData: {fileID: 0}
+  dmgColour: {r: 1, g: 1, b: 1, a: 0}
 --- !u!54 &3885273675882586873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -608,7 +607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b38942f8558a344b2ec69b7ea20c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP: 30
-  maxHP: 30
-  ListOfDamageSources: []
+  health: {fileID: 0}
+  statusEffectsHandler: {fileID: 0}
   statusList: 

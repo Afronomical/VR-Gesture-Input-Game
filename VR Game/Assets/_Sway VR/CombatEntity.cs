@@ -1,5 +1,5 @@
 using UnityEngine;
-
+[RequireComponent(typeof(Health)), RequireComponent(typeof(StatusEffectHandler))]
 public class CombatEntity : MonoBehaviour, IDamageable
 {
     [SerializeField] Health health;
@@ -15,7 +15,8 @@ public class CombatEntity : MonoBehaviour, IDamageable
     }
     public bool Damage(DamageDataSO dmgData)
     {
-        statusEffectsHandler.ApplyEffect(dmgData.statusType, dmgData.statusStacks);
+        if(dmgData.statusType != null) { statusEffectsHandler.ApplyEffect(dmgData.statusType, dmgData.statusStacks); }
+            
 
         return health.DamageHP(dmgData.damageVal);
     }
