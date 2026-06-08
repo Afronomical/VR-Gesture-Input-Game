@@ -371,8 +371,7 @@ MonoBehaviour:
   hitParticle: {fileID: 1643851402782444, guid: 4f703a1da613efc43b08b1d2bdcfd49f, type: 3}
   damagePopUp: {fileID: 0}
   dmgPopUpOffset: {x: 0, y: 0, z: 0}
-  damageTotal: 5
-  effectDataSO: {fileID: 11400000, guid: dd4816b53f8ad8f45a1a22cb09268729, type: 2}
+  damageData: {fileID: 11400000, guid: 03c65d852dd40ed49be8bf94fc8ba2a0, type: 2}
   dmgColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!135 &733498028
 SphereCollider:
@@ -539,8 +538,7 @@ MonoBehaviour:
   hitParticle: {fileID: 1643851402782444, guid: 4f703a1da613efc43b08b1d2bdcfd49f, type: 3}
   damagePopUp: {fileID: 8999099737423263062, guid: 8259d9485cd928042a969b764f4a1d9c, type: 3}
   dmgPopUpOffset: {x: 0, y: 2, z: 0}
-  damageTotal: 5
-  effectDataSO: {fileID: 11400000, guid: dd4816b53f8ad8f45a1a22cb09268729, type: 2}
+  damageData: {fileID: 11400000, guid: 03c65d852dd40ed49be8bf94fc8ba2a0, type: 2}
   dmgColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!135 &866007818
 SphereCollider:
@@ -72532,6 +72530,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6395249296484140987, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395249296484140987, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395249296484140987, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395249296484140987, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395249296484140987, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6990187985084096873, guid: 79d8cb044ed361843b4c29b95badb25a, type: 3}
       propertyPath: m_Name
       value: HoveringHp&Status
@@ -72729,6 +72747,8 @@ GameObject:
   - component: {fileID: 8173487778506587485}
   - component: {fileID: 7551668196322636255}
   - component: {fileID: 8173487778506587486}
+  - component: {fileID: 8173487778506587488}
+  - component: {fileID: 8173487778506587487}
   m_Layer: 0
   m_Name: Mecha Cube Nothing
   m_TagString: Untagged
@@ -73060,9 +73080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b38942f8558a344b2ec69b7ea20c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP: 30
-  maxHP: 30
-  ListOfDamageSources: []
+  health: {fileID: 0}
+  statusEffectsHandler: {fileID: 0}
   statusList: 
 --- !u!1 &7619200544403041566
 GameObject:
@@ -77680,6 +77699,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusEffectsToApplyDictSO: {fileID: 11400000, guid: 35e7ce54267906c4fac78f64dd36f854, type: 2}
   interval: 0.1
+--- !u!114 &8173487778506587487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638291149309152828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff92bfd0a46fa9343b220786b9d91c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabledEffects:
+    rid: 4776672288748077444
+  currentTick: 0
+  lastTick: 0
+  stackThreshold: 5
+  references:
+    version: 2
+    RefIds:
+    - rid: 4776672288748077444
+      type: {class: 'HashSet`1[[StatusEffectSO, Assembly-CSharp]]', ns: System.Collections.Generic, asm: System.Core}
+      data: 
+--- !u!114 &8173487778506587488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638291149309152828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9606e1ed5a3672f4387707ccf5da9994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 10
 --- !u!1 &8259044918704942917
 GameObject:
   m_ObjectHideFlags: 0
