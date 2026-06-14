@@ -17,7 +17,7 @@ AudioRandomContainer:
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements: []
   m_AvoidRepeatingLast: 0
-  m_PlaybackMode: 0
+  m_PlaybackMode: 1
   m_TriggerMode: 1
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2

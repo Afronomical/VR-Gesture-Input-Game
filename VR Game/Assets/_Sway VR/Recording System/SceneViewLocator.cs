@@ -25,5 +25,6 @@ public class SceneViewLocator : MonoBehaviour
         if (targetTransform == null) { return; }
 
         sceneCam.transform.position = targetTransform.position;
+
     }
 }
