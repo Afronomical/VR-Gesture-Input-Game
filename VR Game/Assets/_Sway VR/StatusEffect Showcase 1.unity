@@ -60511,6 +60511,14 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 394587149}
+    - target: {fileID: 4865905782815421972, guid: e8d9d1db82eff7343aa259361f0d887f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6349218405003316854, guid: e8d9d1db82eff7343aa259361f0d887f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7192690673220029923, guid: e8d9d1db82eff7343aa259361f0d887f, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -60751,7 +60759,7 @@ MonoBehaviour:
   moveForce: 14.9
   impactFX: {fileID: 3729273930053375270, guid: 5a7de43f90b3c094f941207c0ef57aa5, type: 3}
   impactSFX: {fileID: 8300000, guid: 16eee155859fce54c9ad624260af7d45, type: 3}
-  laucnhSFX: {fileID: 8300000, guid: ee4af1754dc765144af75154f4eeb4ac, type: 3}
+  launchSFX: {fileID: 0}
 --- !u!1 &2772068181455112003
 GameObject:
   m_ObjectHideFlags: 0
