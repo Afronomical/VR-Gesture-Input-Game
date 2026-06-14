@@ -7,11 +7,19 @@ public class Fireball_Projectile : Projectile
     Vector3 moveDirection;
     [SerializeField] float moveForce = 5f;
     [SerializeField] GameObject impactFX;
+    [SerializeField] AudioClip impactSFX;
+    [SerializeField] AudioClip launchSFX;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+       
+
+    }
+    private void OnEnable()
+    {
+        SoundFXManager.Instance.PlayAudioClip(launchSFX, transform.position, 1f);
     }
     private void FixedUpdate()
     {
@@ -29,6 +37,7 @@ public class Fireball_Projectile : Projectile
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateDamageText(damageData.damageVal);
                 popUp.GetComponent<DamagePopUpTextUpdater>().UpdateColour((damageData.statusType != null)?damageData.statusType.Color : Color.white);
                 Instantiate(impactFX, collision.contacts[0].point, Quaternion.FromToRotation(gameObject.transform.position, collision.gameObject.transform.position));
+                SoundFXManager.Instance.PlayAudioClip(impactSFX, transform.position, 1f);
                 Destroy(gameObject);
 
             }

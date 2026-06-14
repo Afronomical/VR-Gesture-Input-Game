@@ -55,6 +55,8 @@ MonoBehaviour:
   damageData: {fileID: 11400000, guid: 7742b00280806db4bba5585571102a55, type: 2}
   moveForce: 14.9
   impactFX: {fileID: 3729273930053375270, guid: 5a7de43f90b3c094f941207c0ef57aa5, type: 3}
+  impactSFX: {fileID: 8300000, guid: 16eee155859fce54c9ad624260af7d45, type: 3}
+  launchSFX: {fileID: 8300000, guid: ee4af1754dc765144af75154f4eeb4ac, type: 3}
 --- !u!135 &5882740681418482759
 SphereCollider:
   m_ObjectHideFlags: 0
