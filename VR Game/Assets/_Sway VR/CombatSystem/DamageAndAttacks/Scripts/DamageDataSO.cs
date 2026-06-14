@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DamageDataSO : ScriptableObject 
 {
+    [SerializeField] float _id = 0;
+    public float id
+    {   get { return _id; }    
+        set { _id = value; } 
+    }
+
     [SerializeField, Tooltip("The immediate amount of damage applied to the target")]
     private int _damageVal;
     public int damageVal 
@@ -13,13 +19,17 @@ public class DamageDataSO : ScriptableObject
     [SerializeField, Tooltip("The type of damage/element of the attack")]
     private StatusEffectSO _statusType;
     public StatusEffectSO statusType 
-    {  get { return _statusType; } set { _statusType = value; } }
+    {  get { return _statusType; }     
+       set { _statusType = value; }
+    }
 
 
     [SerializeField, Tooltip("The amount of ''x'' status added by this attack. Ex: +3 Burn")]
     private int _statusStacks = 0;
     public int statusStacks 
-    {  get { return _statusStacks; } set { _statusStacks = value; } }
+    {  get { return _statusStacks; }    
+       set { _statusStacks = value; } 
+    }
 
 
     [SerializeField, Tooltip("How long an object damaged by this gets stunned for")]

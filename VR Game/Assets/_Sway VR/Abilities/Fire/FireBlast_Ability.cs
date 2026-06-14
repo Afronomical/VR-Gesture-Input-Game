@@ -42,9 +42,13 @@ public class FireBlast_Ability : Ability
         }
         
     }
-
+    private void Update()
+    {
+        Debug.DrawLine(rightHand.transform.position + rightHand.transform.rotation * offsetFromHand, rightHand.transform.position + rightHand.transform.rotation * offsetFromHand * 5); 
+        Gizmos.DrawCube(rightHand.transform.position + rightHand.transform.rotation * offsetFromHand, new Vector3(1, 1, 1));
+    }
     void SpawnFireBall()
     {
-        Instantiate(projectile, rightHand.transform.position + offsetFromHand, playerHead.transform.rotation);
+        Instantiate(projectile, rightHand.transform.position + rightHand.transform.rotation * offsetFromHand , playerHead.transform.rotation);
     }
 }
